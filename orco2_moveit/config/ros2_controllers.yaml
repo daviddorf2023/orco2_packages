@@ -1,0 +1,34 @@
+# This config file is used by ros2_control
+controller_manager:
+  ros__parameters:
+    update_rate: 100  # Hz
+
+    orco2_group_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+orco2_group_controller:
+  ros__parameters:
+    joints:
+      - index
+      - index (1)
+      - index (2)
+      - middle (2)
+      - middle (1)
+      - middle
+      - pinky (2)
+      - pinky (1)
+      - pinky
+      - ring (2)
+      - ring (1)
+      - ring
+      - thumb (1)
+      - thumb
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity

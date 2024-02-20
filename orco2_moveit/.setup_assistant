@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: orco2_description
+    relative_path: urdf/orco2.xacro
+  srdf:
+    relative_path: config/orco2.srdf
+  package_settings:
+    author_name: David Dorf
+    author_email: davidjohndorf@gmail.com
+    generated_timestamp: 1708452623
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity

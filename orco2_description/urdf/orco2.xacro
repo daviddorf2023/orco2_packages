@@ -1,0 +1,511 @@
+<?xml version="1.0" ?>
+<robot name="orco2" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find orco2_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find orco2_description)/urdf/orco2.trans" />
+<xacro:include filename="$(find orco2_description)/urdf/orco2.gazebo" />
+<link name="base_link">
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find orco2_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="transparent"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find orco2_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="proximal_index_1">
+  <inertial>
+    <origin xyz="-0.00026811053890124156 -1.0667509584005863e-09 0.01315155998961394" rpy="0 0 0"/>
+    <mass value="0.0021684105547166927"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0075 0.043 -0.04" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find orco2_description)/meshes/proximal_index_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="teal"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0075 0.043 -0.04" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find orco2_description)/meshes/proximal_index_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="medial_index_1">
+  <inertial>
+    <origin xyz="-0.0008639675427202613 -5.348660916948411e-09 0.005986507945921871" rpy="0 0 0"/>
+    <mass value="0.001238578240769745"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0075 0.043 -0.08" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find orco2_description)/meshes/medial_index_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="teal"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0075 0.043 -0.08" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find orco2_description)/meshes/medial_index_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="distal_index_1">
+  <inertial>
+    <origin xyz="-0.0011688416492555455 3.901207579204424e-09 0.005749627128669485" rpy="0 0 0"/>
+    <mass value="0.0011585425006040392"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0075 0.043 -0.105" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find orco2_description)/meshes/distal_index_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="teal"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0075 0.043 -0.105" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find orco2_description)/meshes/distal_index_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="distal_middle_1">
+  <inertial>
+    <origin xyz="-0.0011688416492555828 3.898220180681422e-09 0.005749627127922569" rpy="0 0 0"/>
+    <mass value="0.0011585425006040593"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0075 0.023 -0.11" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find orco2_description)/meshes/distal_middle_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="teal"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0075 0.023 -0.11" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find orco2_description)/meshes/distal_middle_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="medial_middle_1">
+  <inertial>
+    <origin xyz="-0.0008639675427202604 -5.364127787788053e-09 0.005986507942055283" rpy="0 0 0"/>
+    <mass value="0.0012385782407697422"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0075 0.023 -0.085" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find orco2_description)/meshes/medial_middle_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="teal"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0075 0.023 -0.085" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find orco2_description)/meshes/medial_middle_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="proximal_middle_1">
+  <inertial>
+    <origin xyz="-0.000268110538901265 -1.0667509722783741e-09 0.013151559989614071" rpy="0 0 0"/>
+    <mass value="0.002168410554716695"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0075 0.023 -0.045" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find orco2_description)/meshes/proximal_middle_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="teal"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0075 0.023 -0.045" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find orco2_description)/meshes/proximal_middle_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="distal_ring_1">
+  <inertial>
+    <origin xyz="-0.0011688416492555524 3.895232861522019e-09 0.005749627128669457" rpy="0 0 0"/>
+    <mass value="0.001158542500604051"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0075 0.003 -0.105" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find orco2_description)/meshes/distal_ring_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="teal"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0075 0.003 -0.105" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find orco2_description)/meshes/distal_ring_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="medial_ring_1">
+  <inertial>
+    <origin xyz="-0.0008639675427202448 -5.379594608320715e-09 0.005986507945921871" rpy="0 0 0"/>
+    <mass value="0.0012385782407697366"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0075 0.003 -0.08" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find orco2_description)/meshes/medial_ring_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="teal"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0075 0.003 -0.08" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find orco2_description)/meshes/medial_ring_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="proximal_ring_1">
+  <inertial>
+    <origin xyz="-0.00026811053890116263 -1.0667509740130976e-09 0.01315155998961446" rpy="0 0 0"/>
+    <mass value="0.002168410554716727"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0075 0.003 -0.04" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find orco2_description)/meshes/proximal_ring_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="teal"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0075 0.003 -0.04" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find orco2_description)/meshes/proximal_ring_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="distal_pinky_1">
+  <inertial>
+    <origin xyz="-0.0011688416492555758 3.892245525882743e-09 0.005749627132776991" rpy="0 0 0"/>
+    <mass value="0.0011585425006040645"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0075 -0.017 -0.077436" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find orco2_description)/meshes/distal_pinky_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="teal"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0075 -0.017 -0.077436" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find orco2_description)/meshes/distal_pinky_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="medial_pinky_1">
+  <inertial>
+    <origin xyz="-0.0008729599209067948 -9.656295475030108e-09 0.004261918528484093" rpy="0 0 0"/>
+    <mass value="0.001055315516696409"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0075 -0.017 -0.055886" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find orco2_description)/meshes/medial_pinky_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="teal"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0075 -0.017 -0.055886" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find orco2_description)/meshes/medial_pinky_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="pinky_proximal_1">
+  <inertial>
+    <origin xyz="-0.000324605834279036 5.966053994582721e-09 0.00871586211038939" rpy="0 0 0"/>
+    <mass value="0.0016456930822198463"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0075 -0.017 -0.025" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find orco2_description)/meshes/pinky_proximal_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="teal"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0075 -0.017 -0.025" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find orco2_description)/meshes/pinky_proximal_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="thumb_distal_1">
+  <inertial>
+    <origin xyz="0.0015642226481202767 -0.006651680684991321 0.005725900138834596" rpy="0 0 0"/>
+    <mass value="0.0017355030582503657"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.043691 0.100735 -0.018449" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find orco2_description)/meshes/thumb_distal_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="teal"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.043691 0.100735 -0.018449" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find orco2_description)/meshes/thumb_distal_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="thumb_proximal_1">
+  <inertial>
+    <origin xyz="0.0018111643219230755 -0.009987397089365649 0.009495112386079576" rpy="0 0 0"/>
+    <mass value="0.0025987378853827825"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.036852 0.071586 0.008634" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find orco2_description)/meshes/thumb_proximal_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="teal"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.036852 0.071586 0.008634" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find orco2_description)/meshes/thumb_proximal_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="logo_upper_1">
+  <inertial>
+    <origin xyz="-0.0004999999999999996 -5.1880026565103224e-05 0.00029445421543498104" rpy="0 0 0"/>
+    <mass value="0.00044352451798406806"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 0.014108 0.008069" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find orco2_description)/meshes/logo_upper_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="white"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 0.014108 0.008069" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find orco2_description)/meshes/logo_upper_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="logo_lower_1">
+  <inertial>
+    <origin xyz="-0.0004999999999999999 -0.002363563567637672 -9.282256300421204e-05" rpy="0 0 0"/>
+    <mass value="0.0001064791641967489"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 0.018785 0.034692" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find orco2_description)/meshes/logo_lower_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="white"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 0.018785 0.034692" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find orco2_description)/meshes/logo_lower_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="palm_1">
+  <inertial>
+    <origin xyz="0.0015087580029516864 -0.0020374080683594614 0.049621753450303605" rpy="0 0 0"/>
+    <mass value="0.0994856501212332"/>
+    <inertia ixx="0.000127" iyy="8.6e-05" izz="6.4e-05" ixy="5e-06" iyz="2e-06" ixz="6e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.015 0.015 0.075" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find orco2_description)/meshes/palm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="teal"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.015 0.015 0.075" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find orco2_description)/meshes/palm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="index" type="revolute">
+  <origin xyz="-0.0075 -0.028 0.115" rpy="0 0 0"/>
+  <parent link="palm_1"/>
+  <child link="proximal_index_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+  <limit effort="1000.0" lower="0.0" upper="1.7" velocity="0.5"/>
+  <limit effort="1000.0" lower="0.0" upper="1.7" velocity="0.5"/>
+</joint>
+
+<joint name="index (1)" type="revolute">
+  <origin xyz="0.0 0.0 0.04" rpy="0 0 0"/>
+  <parent link="proximal_index_1"/>
+  <child link="medial_index_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+  <limit effort="1000.0" lower="0.0" upper="1.7" velocity="0.5"/>
+</joint>
+
+<joint name="index (2)" type="revolute">
+  <origin xyz="0.0 0.0 0.025" rpy="0 0 0"/>
+  <parent link="medial_index_1"/>
+  <child link="distal_index_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+  <limit effort="1000.0" lower="0.0" upper="1.7" velocity="0.5"/>
+</joint>
+
+<joint name="middle" type="revolute">
+  <origin xyz="0.0 0.0 0.025" rpy="0 0 0"/>
+  <parent link="medial_middle_1"/>
+  <child link="distal_middle_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+  <limit effort="1000.0" lower="0.0" upper="1.7" velocity="0.5"/>
+</joint>
+
+<joint name="middle (1)" type="revolute">
+  <origin xyz="0.0 0.0 0.04" rpy="0 0 0"/>
+  <parent link="proximal_middle_1"/>
+  <child link="medial_middle_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+  <limit effort="1000.0" lower="0.0" upper="1.7" velocity="0.5"/>
+</joint>
+
+<joint name="middle (2)" type="revolute">
+  <origin xyz="-0.0075 -0.008 0.12" rpy="0 0 0"/>
+  <parent link="palm_1"/>
+  <child link="proximal_middle_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+  <limit effort="1000.0" lower="0.0" upper="1.7" velocity="0.5"/>
+</joint>
+
+<joint name="ring" type="revolute">
+  <origin xyz="0.0 0.0 0.025" rpy="0 0 0"/>
+  <parent link="medial_ring_1"/>
+  <child link="distal_ring_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+  <limit effort="1000.0" lower="0.0" upper="1.7" velocity="0.5"/>
+</joint>
+
+<joint name="ring (1)" type="revolute">
+  <origin xyz="0.0 0.0 0.04" rpy="0 0 0"/>
+  <parent link="proximal_ring_1"/>
+  <child link="medial_ring_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+  <limit effort="1000.0" lower="0.0" upper="1.7" velocity="0.5"/>
+</joint>
+
+<joint name="ring (2)" type="revolute">
+  <origin xyz="-0.0075 0.012 0.115" rpy="0 0 0"/>
+  <parent link="palm_1"/>
+  <child link="proximal_ring_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+  <limit effort="1000.0" lower="0.0" upper="1.7" velocity="0.5"/>
+</joint>
+
+<joint name="pinky" type="revolute">
+  <origin xyz="0.0 0.0 0.02155" rpy="0 0 0"/>
+  <parent link="medial_pinky_1"/>
+  <child link="distal_pinky_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+  <limit effort="1000.0" lower="0.0" upper="1.7" velocity="0.5"/>
+</joint>
+
+<joint name="pinky (1)" type="revolute">
+  <origin xyz="0.0 0.0 0.030886" rpy="0 0 0"/>
+  <parent link="pinky_proximal_1"/>
+  <child link="medial_pinky_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+  <limit effort="1000.0" lower="0.0" upper="1.7" velocity="0.5"/>
+</joint>
+
+<joint name="pinky (2)" type="revolute">
+  <origin xyz="-0.0075 0.032 0.1" rpy="0 0 0"/>
+  <parent link="palm_1"/>
+  <child link="pinky_proximal_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+  <limit effort="1000.0" lower="0.0" upper="1.7" velocity="0.5"/>
+</joint>
+
+<joint name="thumb" type="revolute">
+  <origin xyz="0.006839 -0.029149 0.027083" rpy="0 0 0"/>
+  <parent link="thumb_proximal_1"/>
+  <child link="thumb_distal_1"/>
+  <axis xyz="0.866854 -0.19064 -0.460675"/>
+  <limit effort="1000.0" lower="-1.7" upper="0.0" velocity="0.5"/>
+</joint>
+
+<joint name="thumb (1)" type="revolute">
+  <origin xyz="0.021852 -0.056586 0.066366" rpy="0 0 0"/>
+  <parent link="palm_1"/>
+  <child link="thumb_proximal_1"/>
+  <axis xyz="0.866854 -0.19064 -0.460675"/>
+  <limit effort="1000.0" lower="-1.7" upper="0.0" velocity="0.5"/>
+</joint>
+
+<joint name="palm" type="fixed">
+  <origin xyz="-0.015 0.000892 0.066931" rpy="0 0 0"/>
+  <parent link="palm_1"/>
+  <child link="logo_upper_1"/>
+</joint>
+
+<joint name="palm (1)" type="fixed">
+  <origin xyz="-0.015 -0.003785 0.040308" rpy="0 0 0"/>
+  <parent link="palm_1"/>
+  <child link="logo_lower_1"/>
+</joint>
+
+<joint name="palm (2)" type="fixed">
+  <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="palm_1"/>
+</joint>
+
+</robot>

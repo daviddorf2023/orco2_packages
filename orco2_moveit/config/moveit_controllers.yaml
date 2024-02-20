@@ -1,0 +1,27 @@
+# MoveIt uses this configuration for controller management
+
+moveit_controller_manager: moveit_simple_controller_manager/MoveItSimpleControllerManager
+
+moveit_simple_controller_manager:
+  controller_names:
+    - orco2_group_controller
+
+  orco2_group_controller:
+    type: FollowJointTrajectory
+    action_ns: follow_joint_trajectory
+    default: true
+    joints:
+      - index
+      - index (1)
+      - index (2)
+      - middle (2)
+      - middle (1)
+      - middle
+      - pinky (2)
+      - pinky (1)
+      - pinky
+      - ring (2)
+      - ring (1)
+      - ring
+      - thumb (1)
+      - thumb
